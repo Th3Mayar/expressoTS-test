@@ -7,10 +7,10 @@
         }
     ],
     "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/",
-        "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
-      }
-    ]
+    {
+      "src": "/(.*)",
+      "dest": "/dist/src/main.js",
+      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"]
+    }
+  ]
   }
