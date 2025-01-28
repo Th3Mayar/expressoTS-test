@@ -20,6 +20,7 @@
         "@expressots/adapter-express": "3.0.0",
         "@expressots/core": "3.0.0",
         "@expressots/shared": "3.0.0",
+        "@vercel/node": "^5.0.2",
         "vercel": "^39.3.0"
     },
     "devDependencies": {
