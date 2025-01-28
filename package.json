@@ -6,7 +6,7 @@
     "private": true,
     "license": "UNLICENSED",
     "scripts": {
-        "build": "expressots build",
+        "build": "expressots build --output dist",
         "dev": "expressots dev",
         "prod": "expressots prod",
         "test": "jest",
