@@ -6,7 +6,7 @@
     "private": true,
     "license": "UNLICENSED",
     "scripts": {
-        "build": "npx expressots build",
+        "build": "expressots build",
         "dev": "expressots dev",
         "prod": "expressots prod",
         "test": "jest",
