@@ -1,6 +1,6 @@
 import { AppFactory } from "@expressots/core";
-import { App } from "app";
-import { env } from "env";
+import { App } from "./app";
+import { env } from "./env";
 
 AppFactory.create(App).then((app) =>
     app.listen(env.App.Port, {
