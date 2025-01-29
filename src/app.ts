@@ -14,7 +14,7 @@ export class App extends AppExpress {
     async globalConfiguration(): Promise<void> {
         this.setGlobalRoutePrefix("/");
 
-        this.initEnvironment("production", {
+        this.initEnvironment("development", {
             env: {
                 development: ".env.development",
                 production: ".env.production",
