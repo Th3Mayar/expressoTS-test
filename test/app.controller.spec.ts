@@ -22,7 +22,7 @@ describe("AppController", () => {
 
     it("returns a valid AppResponse", async () => {
         return request(server)
-            .get("/v1")
+            .get("/")
             .expect(StatusCode.OK)
             .expect("Hello from ExpressoTS!");
     });
