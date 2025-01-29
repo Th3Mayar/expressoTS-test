@@ -5,14 +5,20 @@ export class AppUseCase {
 
     // Get all locations
     async execute() {
-        // Get API_URL_rickandmortyapi from .env
-        const apiUrl = process.env.API_URL_rickandmortyapi + "location";
+        try {
+            // Get API_URL_rickandmortyapi from .env
+            const apiUrl = process.env.API_URL_rickandmortyapi + "location";
 
-        // Get results from apiUrl
-        const results = fetch(apiUrl).then(response => response.json());
-        
-        // Return results
-        return await results;
+            // Get results from apiUrl
+            const results = fetch(apiUrl).then(response => response.json());
+            
+            // Return results
+            return await results;
+            
+        } catch (error) {
+            console.error(error);
+            return error;
+        }
     }
 
     

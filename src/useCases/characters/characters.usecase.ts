@@ -5,14 +5,20 @@ export class AppUseCase {
 
     // Get all characters
     async execute() {
-        // Get API_URL_rickandmortyapi from .env
-        const apiUrl = process.env.API_URL_rickandmortyapi + "character";
+        try {
+            // Get API_URL_rickandmortyapi from .env
+            const apiUrl = process.env.API_URL_rickandmortyapi + "character";
 
-        // Get results from apiUrl
-        const results = fetch(apiUrl).then(response => response.json());
-        
-        // Return results
-        return await results;
+            // Get results from apiUrl
+            const results = fetch(apiUrl).then(response => response.json());
+            
+            // Return results
+            return await results;
+            
+        } catch (error) {
+            console.error(error);
+            return error;
+        }
     }
 
     // Get one episode by id
