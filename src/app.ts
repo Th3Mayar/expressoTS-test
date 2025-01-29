@@ -1,9 +1,9 @@
 import { AppExpress } from "@expressots/adapter-express";
 import { AppContainer, Env } from "@expressots/core";
-import { AppModule } from "./useCases/app/app.module";
-import { CharactersModule } from "./useCases/characters/characters.module";
-import { LocationsModule } from "./useCases/locations/locations.module";
-import { EpisodesModule } from "./useCases/episodes/episodes.module";
+import { AppModule } from "@/useCases/app/app.module";
+import { CharactersModule } from "@/useCases/characters/characters.module";
+import { LocationsModule } from "@/useCases/locations/locations.module";
+import { EpisodesModule } from "@/useCases/episodes/episodes.module";
 
 export class App extends AppExpress {
     private config: AppContainer = this.configContainer([AppModule]);
@@ -14,7 +14,7 @@ export class App extends AppExpress {
     async globalConfiguration(): Promise<void> {
         this.setGlobalRoutePrefix("/");
 
-        this.initEnvironment("development", {
+        this.initEnvironment("production", {
             env: {
                 development: ".env.development",
                 production: ".env.production",

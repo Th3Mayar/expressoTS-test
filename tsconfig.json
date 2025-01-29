@@ -10,7 +10,7 @@
         "resolveJsonModule": true,
         "sourceMap": false,
         "outDir": "./dist",
-        "rootDir": "./src",
+        "rootDir": "./",
         "baseUrl": "./src",
         "moduleResolution": "node",
         "paths": {
